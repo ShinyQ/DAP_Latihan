@@ -16,9 +16,15 @@ func main() {
 	for i <= n {
 		fmt.Print("Bunga ", i, ": ")
 		fmt.Scanln(&bunga)
-		output = output + bunga + " - "
-		i++
+
+		if bunga == "SELESAI" {
+			break
+		} else {
+			output = output + bunga + " - "
+			i++
+		}
 	}
 
-	fmt.Println("Pita : ", output)
+	fmt.Println("Pita :", output)
+	fmt.Println("Bunga :", i-1)
 }
