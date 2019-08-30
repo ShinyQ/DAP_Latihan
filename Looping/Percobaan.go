@@ -32,7 +32,5 @@ func main() {
 
 		i++
 	}
-
 	fmt.Println("BERHASIL: ", isBerhasil)
-
 }
