@@ -1,7 +1,6 @@
 /*
 	Nama : Kurniadi Ahmad Wijaya
 	NIM : 1301194024
-	Deskripsi :
 */
 
 package main
@@ -11,16 +10,14 @@ import (
 	"math"
 )
 
-func jarak(x1, y1, x2, y2 float64) (total float64) {
+func jarak(x1, y1, x2, y2 float64) float64 {
 	var (
 		a, b float64
 	)
 
-	a = math.Sqrt(math.Abs(x1 - x2))
-	b = math.Sqrt(math.Abs(y1 - y2))
-
-	total = a + b
-	return
+	a = math.Pow(math.Abs(x1-x2), 2)
+	b = math.Pow(math.Abs(y1-y2), 2)
+	return math.Sqrt(a + b)
 }
 
 func main() {
