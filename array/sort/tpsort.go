@@ -3,7 +3,8 @@ package main
 const MAXSIZE = 20192020
 
 type RecType struct {
-	size int
+	count int
+	size  int
 }
 
 type ArrType [MAXSIZE]RecType
@@ -12,7 +13,7 @@ func iSort(tab ArrType, nsize int) {
 	for i := 1; i < nsize; i++ {
 		j := i
 		for j > 0 {
-			if tab[j-1].size > tab[j].size {
+			if tab[j-1].count > tab[j].count {
 				tab[j-1], tab[j] = tab[j], tab[j-1]
 			}
 			j = j - 1
@@ -40,9 +41,9 @@ func isFound(tab ArrType, n, v int) bool {
 
 	for iKiri < iKanan {
 		iMid := (iKanan + iKiri) / 2
-		if tab[iMid].size < v {
+		if tab[iMid].count < v {
 			iKiri = iMid + 1
-		} else if tab[iMid].size > v {
+		} else if tab[iMid].count > v {
 			iKanan = iMid - 1
 		} else {
 			return true
