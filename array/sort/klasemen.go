@@ -2,8 +2,6 @@ package main
 
 import "fmt"
 
-const NMAX = 999
-
 var (
 	TabelKlub []Klub
 	m         int
